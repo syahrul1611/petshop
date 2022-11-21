@@ -104,17 +104,19 @@ class CI_Controller {
 	public function template($yield,$title,$css = [],$js = [])
     {
         $data = array();
-        $data['jss'] = [
-            'vendor/bootstrap.bundle.min.js',
-			'vendor/jquery-3.6.1.js'
-        ];
-		$data['jss'] = array_merge($data['jss'], $js);
-        $data['csss'] = [
-            'vendor/bootstrap.min.css',
+		$data['vendor_css'] = [
+			'vendor/bootstrap.min.css',
+			'vendor/fontawesome/css/all.min.css',
+		];
+		$data['vendor_js'] = [
+			'vendor/bootstrap.bundle.min.js',
+			'vendor/jquery-3.6.1.js',
+		];
+		$data['main_css'] = [
 			'css/footer.css',
-			'fontawesome/css/all.min.css'
-        ];
-		$data['csss'] = array_merge($data['csss'], $css);
+		];
+        $data['jss'] = $js;
+        $data['csss'] = $css;
         $data['yield'] = $yield;
         $data['title'] = $title;
         $this->load->view('layouts/application', $data);
