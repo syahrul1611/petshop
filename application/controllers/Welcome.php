@@ -4,6 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Welcome extends CI_Controller {
 	public function index()
 	{
-		parent::template('home','Home',['home/multiCarousel.css']);
+		parent::template('home','Home');
 	}
 }

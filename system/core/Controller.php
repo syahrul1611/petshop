@@ -105,12 +105,14 @@ class CI_Controller {
     {
         $data = array();
         $data['jss'] = [
-            'bootstrap/bootstrap.bundle.min.js',
-			'bootstrap/jquery-3.6.1.js'
+            'vendor/bootstrap.bundle.min.js',
+			'vendor/jquery-3.6.1.js'
         ];
 		$data['jss'] = array_merge($data['jss'], $js);
         $data['csss'] = [
-            'bootstrap/bootstrap.min.css'
+            'vendor/bootstrap.min.css',
+			'css/footer.css',
+			'fontawesome/css/all.min.css'
         ];
 		$data['csss'] = array_merge($data['csss'], $css);
         $data['yield'] = $yield;

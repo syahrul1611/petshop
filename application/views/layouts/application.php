@@ -15,15 +15,16 @@
         <!-- End Navbar -->
 
         <!-- Body -->
-        <section class="container" style="margin-top:50px;" role="main">
+        <section class="container" style="margin-top:70px;" role="main">
             <?php $this->load->view($yield); ?>
         </section>
-        <!-- End Body -->
-
-        <!-- Footer -->
         <?php foreach ($jss as $js) : ?>
         <script src="<?php echo base_url(); ?>assets/<?php echo $js; ?>"></script>
         <?php endforeach; ?>
+        <!-- End Body -->
+
+        <!-- Footer -->
+        <?php $this->load->view('layouts/footer'); ?>
         <!-- End Footer -->
     </body>
 </html>
